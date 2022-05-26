@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us | APU Badminton Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <script src="../main.js"></script>
+    <style>
+        iframe {
+            margin: 4vmin;
+            width: 45vw;
+            height: 45vh;
+        }
+
+        .details {
+            width: 35vw;
+            margin: 0 auto;
+        }
+
+        .details p {
+            padding: 1vmin;
+            text-align: center;
+            text-transform: none;
+        }
+
+        /* Responsive Containter */
+
+        @media only screen and (max-width:900px) {
+            iframe {
+                width: 88vw;
+            }
+            .container {
+                margin: 5vmin;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: whitesmoke">
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <div class="col-5">
+            <a href="../index.html">Home</a>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="../index.html#latest">Latest</a>
+            <div class="ddcontent">
+                <a href="../latest/news.html">News</a>
+                <a href="../latest/upcoming-events.html">Upcoming Events</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="../index.html#about">About</a>
+            <div class="ddcontent">
+                <a href="our-club.html">Mission, Vision &amp; Goals</a>
+                <a href="weekly-sessions.html">Weekly Sessions</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="../index.html#regulations">Regulations</a>
+            <div class="ddcontent">
+                <a href="../regulations/rules.html">Rules</a>
+                <a href="../regulations/attire.html">Attire &amp; Equipment</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="../index.html#join">Join</a>
+            <div class="ddcontent">
+                <a href="../join/join-club.html">Join Our Club</a>
+                <a href="../join/recruitment-2018.html">Team Recruitment 2018</a>
+            </div>
+        </div>
+        <div>
+            <a href="javascript:void(0);" class="menuIcon" onclick="navbar()">
+                <svg style="width:24px;height:24px" viewbox="0 0 24 24">
+                    <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- Scroll Up -->
+    <a href="#">
+        <div class="scrollup">
+            <svg viewbox="0 0 24 24">
+                <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /> </svg>
+        </div>
+    </a>
+    <!-- Title -->
+    <div class="pagetitle parallax" style="background-image: url('../assets/apu-campus.jpg');">
+        <h1>Contact Us</h1>
+    </div>
+    <!-- Embedded Google Map -->
+    <div class="col-2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1478460949274!2d101.69855765113991!3d3.055077354562816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia+Pacific+University+of+Technology+%26+Innovation+(APU)!5e0!3m2!1sen!2smy!4v1529493340454"
+            style="border:0" allowfullscreen></iframe>
+    </div>
+    <!-- Contact Us Details -->
+    <div class="col-2" style="text-transform: none;">
+        <p>For any enquiries, please contact us through the any of the following methods:</p>
+        <p>Enquiry Form&#58;</p>
+        <a href=" contact-us/enquiry.html " class="bluelink ">
+            <div class="details card ">
+                <p>Online Enquiry</p>
+            </div>
+        </a>
+        <p>Contact Number&#58;</p>
+        <a href="tel:+60127006556 " class="bluelink ">
+            <div class="details card ">
+                <p>Karman &#40;012&#45;700 6556&#41;</p>
+            </div>
+        </a>
+        <p>Email Address&#58;</p>
+        <a href="mailto:info@apubadminton.com " class="bluelink ">
+            <div class="details card ">
+                <p>info@apubadminton.com</p>
+            </div>
+        </a>
+        <p>Location&#58;</p>
+        <a href="https://www.google.com/maps/place/Asia+Pacific+University+of+Technology+%26+Innovation+(APU)/@3.055072,101.700752,16z/data=!4m5!3m4!1s0x0:0x1c37182a714ba968!8m2!3d3.055072!4d101.7007517?hl=en-MY "
+            target="_blank " class="bluelink ">
+            <div class="details card ">
+                <p>Asia Pacific University of Technology &amp; Innovation</p>
+            </div>
+        </a>
+        <p>Feedback Form&#58;</p>
+        <a href="contact-us/feedback.html " class="bluelink ">
+            <div class="details card ">
+                <p>Online Feedback</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

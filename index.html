@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>APU Badminton Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        /* Home Cover */
+
+        .home-cover {
+            background-image: url("assets/home-cover.jpg");
+            height: 35vmin;
+            width: 100%;
+            background-position: 0 -30vh;
+        }
+
+        /* Welcome Text */
+
+        .splash-text {
+            position: absolute;
+            left: 10vmin;
+            top: 5vmin;
+            filter: drop-shadow( 5px 5px 10px black);
+            width: 80%;
+        }
+
+        .logo {
+            height: 20vmin;
+            float: left;
+            margin-right: 3vw;
+            margin-bottom: 3vw;
+        }
+
+        .splash-text p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 2.5vmin;
+            color: white;
+            text-align: left;
+        }
+
+        /* Sections */
+
+        #about,
+        #join {
+            background-color: gainsboro;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Latest */
+
+        /* Latest Section */
+
+        /* News */
+
+        .news {
+            width: 47vw;
+            min-height: 20vmin;
+        }
+
+        .news img {
+            float: left;
+            width: 20vmin;
+            height: 20vmin;
+            margin-right: 2vmin;
+        }
+
+        .news .container {
+            text-align: left;
+            padding: 1vmin;
+        }
+
+        /* Responsive News  */
+
+        @media only screen and (max-width: 900px) {
+            .news {
+                width: 94%;
+                min-height: 24vmin;
+            }
+            .news img {
+                height: 24vmin;
+                width: 24vmin;
+            }
+        }
+
+        /* Highlights */
+
+        .highlights {
+            width: 44vw;
+            height: 42.5vmin;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            vertical-align: middle;
+            width: 44vw;
+            height: 33vmin;
+            margin: 0;
+        }
+
+        /* Caption text */
+
+        .slides p {
+            margin: 0;
+            padding: 2.5vmin 0 1vmin 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Dots */
+
+        .dot {
+            cursor: pointer;
+            height: 1.5vmin;
+            width: 1.5vmin;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Responsive Highlights */
+
+        @media only screen and (max-width: 900px) {
+            .highlights {
+                width: 94%;
+                height: 33vmin;
+            }
+            .highlights img {
+                float: left;
+            }
+            .slides p {
+                font-size: 2.5vmin;
+                padding: 10vh 0;
+            }
+        }
+
+        /* About Us */
+
+        .about-cover {
+            background-image: url('assets/about-cover.jpg');
+        }
+
+        .about {
+            width: 94%;
+            min-height: 40vmin;
+            padding: 6vmin 5vmin 6vmin 2vmin;
+            text-shadow: 5px 5px 10px black;
+        }
+
+        .about p {
+            font-size: 2.5vmin;
+            text-transform: none;
+            margin: 10vmin 0;
+        }
+
+        /* Regulations */
+
+        .regulations {
+            width: 44vw;
+            max-height: 46vmin;
+        }
+
+        .regulations img {
+            width: 44vw;
+            max-height: 33vmin;
+        }
+
+        .regulations p {
+            text-align: center;
+            font-size: 2.5vmin;
+            font-weight: bold;
+            padding: 4vmin;
+        }
+
+        /* Responsive Regulations */
+
+        @media only screen and (max-width: 900px) {
+            .regulations {
+                width: 94%;
+                height: 24vmin;
+            }
+            .regulations img {
+                width: 24vmin;
+                height: 24vmin;
+                float: left;
+            }
+            .regulations p {
+                padding: 8vh 0;
+            }
+        }
+
+        /* Join Us */
+
+        #join {
+            min-height: 30vmin;
+        }
+
+        .join-cover {
+            background-image: url('assets/join-cover.jpg')
+        }
+
+        .join-us {
+            width: 94%;
+            min-height: 30vmin;
+            padding: 6vmin 5vmin 6vmin 2vmin;
+            text-shadow: 5px 5px 10px black;
+        }
+
+        .join-us p {
+            font-size: 2.5vmin;
+            text-transform: none;
+            margin: 10vmin 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Cover -->
+    <div class="home-cover parallax"></div>
+    <!-- Welcome Text -->
+    <div class="splash-text">
+        <img class="logo" src="assets/logo.png" alt="APU Badminton Club Logo">
+        <p style="margin-top: 4vmin;">Asia Pacific University</p>
+        <p style="font-size: 7vmin; margin-top: 2vmin;">Badminton Club</p>
+    </div>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar" onmouseover="dropdownPos()">
+        <div class="col-5">
+            <a href="#">Home</a>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="#latest">Latest</a>
+            <div class="ddcontent" id="navlatest">
+                <a href="latest/news.html">News</a>
+                <a href="latest/upcoming-events.html">Upcoming Events</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="#about">About</a>
+            <div class="ddcontent" id="navabout">
+                <a href="about/our-club.html">Mission, Vision &amp; Goals</a>
+                <a href="about/weekly-sessions.html">Weekly Sessions</a>
+                <a href="about/gallery.html">Gallery</a>
+                <a href="about/contact-us.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="#regulations">Regulations</a>
+            <div class="ddcontent" id="navregulations">
+                <a href="regulations/rules.html">Rules</a>
+                <a href="regulations/attire.html">Attire &amp; Equipment</a>
+            </div>
+        </div>
+        <div class="col-5 dropdown">
+            <a href="#join">Join</a>
+            <div class="ddcontent" id="navjoin">
+                <a href="join/join-club.html">Join Our Club</a>
+                <a href="join/recruitment-2018.html">Team Recruitment 2018</a>
+            </div>
+        </div>
+        <div>
+            <a href="javascript:void(0);" class="menuIcon" onclick="navbar()">
+                <svg style="width:24px;height:24px" viewbox="0 0 24 24">
+                    <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /> </svg>
+            </a>
+        </div>
+    </div>
+    <!-- Scroll Up -->
+    <a href="#">
+        <div class="scrollup">
+            <svg viewbox="0 0 24 24">
+                <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /> </svg>
+        </div>
+    </a>
+    <!-- Sections -->
+    <!-- Latest Section -->
+    <section id="latest">
+        <h1>Latest</h1>
+        <div class="col-2">
+            <h2>
+                <a href="latest/news.html">News</a>
+            </h2>
+            <a href="latest/news/you-are-going-down.html">
+                <div class="news card">
+                    <img src="assets/latest/thumbnail/you-are-going-down.JPG" alt="You Are Going Down!">
+                    <div class="container">
+                        <h3>You are Going Down!</h3>
+                        <p class="caption">Shuttler Hans-Kristian Vittinghus has much respect for Malaysia but he thinks the team led by Lee
+                            Chong Wei are set to go down...</p>
+                    </div>
+                </div>
+            </a>
+            <a href="latest/news/youngsters-on-thomas-cup.html">
+                <div class="news card">
+                    <img src="assets/latest/thumbnail/youngsters-on-thomas-cup.jpg" alt="Youngsters on Thomas Cup">
+                    <div class="container">
+                        <h3>Youngsters on Thomas Cup</h3>
+                        <p class="caption">As a badminton coach, Datuk Misbun Sidek has seen it all since Malaysia last won the Thomas Cup 26
+                            years ago...</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-2">
+            <h2> Highlights </h2>
+            <div class="highlights card">
+                <a href="latest/upcoming-events/apu-sunway-2018.html">
+                    <div class="slides fade">
+                        <img src="assets/latest/apu-sunway-2018.jpg" alt="APU-Sunway Tournament 2018">
+                        <p>APU-Sunway Tournament 2018</p>
+                    </div>
+                </a>
+                <a href="about/weekly-sessions.html">
+                    <div class="slides fade">
+                        <img src="assets/about/weekly-sessions.jpg" alt="Weekly Sessions">
+                        <p>Weekly Sessions</p>
+                    </div>
+                </a>
+                <a href="join/recruitment-2018.html">
+                    <div class="slides fade">
+                        <img src="assets/join/recruitment-2018.jpg" alt="Team Recruitment 2018">
+                        <p>Team Recruitment 2018</p>
+                    </div>
+                </a>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about-cover parallax" id="about">
+        <div class="about">
+            <h1>About Us</h1>
+            <p>Our mission is to guide and motivate all the badminton players, provide entertainment through exciting activities
+                give impetus on fan experience and create innovative, influential sustainability initiatives.</p>
+            <a href="about/our-club.html"
+                class="button">Find Out More</a>
+        </div>
+    </section>
+    <!-- Regulations Section -->
+    <section id="regulations">
+        <h1>Rules &amp; Regulations</h1>
+        <a href="regulations/rules.html">
+            <div class="col-2">
+                <div class="regulations card">
+                    <img src="assets/regulations/rules.jpg" alt="Rules">
+                    <p>Rules</p>
+                </div>
+            </div>
+        </a>
+        <a href="regulations/attire.html">
+            <div class="col-2">
+                <div class="regulations card">
+                    <img src="assets/regulations/attire-home.png" alt="Attire">
+                    <p>Attire</p>
+                </div>
+            </div>
+        </a>
+    </section>
+    <!-- Join Section -->
+    <section class="join-cover parallax" id="join">
+        <div class="join-us">
+            <h1>Join Us</h1>
+            <p>Why wait? Come and relief yourself from stress and get to know other players too! We hope to see you soon!</p>
+            <a href="join/join-club.html" class="button">Join Now</a>
+        </div>
+    </section>
+    <script>
+        /* Slide Scripts*/
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script> </body>
+</html>

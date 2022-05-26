@@ -1,0 +1,343 @@
+/* Default CSS Properties */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.bluelink {
+  color: deepskyblue;
+}
+
+p {
+  font-size: 1.8vmin;
+}
+
+/* Columns */
+.col-2 {
+  float: left;
+  width: 50%;
+}
+
+.col-3 {
+  float: left;
+  width: 33.33%;
+}
+
+.col-4 {
+  float: left;
+  width: 25%;
+}
+
+.col-5 {
+  float: left;
+  width: 20%;
+}
+
+/* Responsive Columns */
+@media only screen and (max-width: 900px) {
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5 {
+    float: none;
+    width: 100%;
+  }
+}
+
+.parallax {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  background-color: gainsboro;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.navbar .col-5:hover {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(59, 59, 59, 0.4);
+  transition: 0.2s;
+}
+
+.navbar a {
+  padding: 1.7vmin;
+  display: block;
+  text-align: center;
+  font-size: 2vmin;
+}
+
+.navbar .menuIcon {
+  display: none;
+}
+
+/* Dropdown Content */
+.ddcontent {
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 20%;
+  box-shadow: 0 4px 10px rgba(59, 59, 59, 0.4);
+}
+
+.ddcontent a {
+  font-size: 1.7vmin;
+}
+
+.ddcontent a:hover {
+  box-shadow: none;
+  background-color: lightgray;
+  transition: 0.2s;
+}
+
+.dropdown:hover .ddcontent {
+  display: block;
+}
+
+/* Responsive Navigation Bar */
+@media only screen and (max-width: 900px) {
+  .navbar a,
+  .dropdown a {
+    display: none;
+  }
+  .navbar .menuIcon {
+    float: right;
+    display: block;
+  }
+
+  .navbar.responsive .menuIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a,
+  .dropdown.responsive a {
+    display: block;
+    text-align: center;
+  }
+
+  .ddcontent {
+    min-width: 50vw;
+  }
+}
+
+/* Sections */
+section {
+  min-height: 55vmin;
+  width: 100%;
+  padding: 5vmin 3vmin;
+  background-color: whitesmoke;
+}
+
+section h1 {
+  font-size: 3vmin;
+  margin: 0.5vmin 0;
+}
+
+section h2 {
+  font-size: 2vmin;
+  margin: 0.3vmin 0;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  margin: 2vmin 0;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Scroll Up Button */
+.scrollup {
+  position: fixed;
+  right: 5vmin;
+  bottom: 5vmin;
+  cursor: pointer;
+  height: 7vmin;
+  width: 7vmin;
+  background-color: deepskyblue;
+  border-radius: 50%;
+  margin: 2vmin 0;
+}
+
+.scrollup:hover {
+  background-color: dodgerblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.scrollup svg {
+  padding: 1vmin;
+  width: 5vmin;
+  height: 5vmin;
+  fill: white;
+}
+
+/* Button */
+.button {
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 12px 28px;
+  text-shadow: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: dodgerblue;
+  box-shadow: 0 5px 10px rgba(59, 59, 59, 0.8);
+  transition: 0.2s;
+}
+
+/* Captions */
+.caption {
+  font-size: 1.8vmin;
+  text-transform: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive Captions */
+@media only screen and (max-width: 900px) {
+  .caption {
+    font-size: 2vmin;
+  }
+}
+
+/* Pages */
+.pagetitle {
+  width: 100%;
+  text-align: center;
+  padding: 1.5vmin 0;
+}
+
+/* News */
+.newscontent {
+  padding: 0 2% 0 3%;
+  float: left;
+  width: 60%;
+}
+
+.sidemenu {
+  padding: 2vmin;
+  position: fixed;
+  right: 2vmin;
+  top: 18vmin;
+  background-color: whitesmoke;
+  width: 30%;
+  color: none;
+  text-decoration: none;
+}
+
+/* Responsive News */
+@media only screen and (min-width: 1000px) {
+  .newscontent {
+    width: 40%;
+    padding: 0 2% 0 8%;
+  }
+
+  .sidemenu {
+    width: 25%;
+    right: 10vmin;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sidemenu {
+    display: none;
+  }
+}
+
+/* Events */
+.events {
+  padding: 4vmin;
+}
+
+.events img {
+  height: 50vh;
+  margin: 0vmin 3vmin 0 0;
+  float: left;
+}
+
+/* Forms */
+fieldset {
+  margin: 5vmin;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1.7vmin;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075),
+    0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+
+input[type="reset"] {
+  float: left;
+  width: 10vw;
+  background-color: gray;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.7vmin;
+}
+
+input[type="submit"] {
+  float: right;
+  width: 20vw;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.7vmin;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
